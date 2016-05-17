@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Scroll Fader</title>
+        <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                height: 300vw;
+            }
+            .image {
+                position: relative;
+            }
+            .image img {
+                width: 100%;
+                height: auto;
+            }
+            .fader {
+                background: #FFF;
+                display: block;
+                position: absolute;
+                top:0;right:0;bottom:0;left:0;
+                mask: url(inverse_layer.png);
+                -webkit-mask: url(inverse_layer.png);
+                mask-position: center;
+                -webkit-mask-position: center;
+                mask-size: cover;
+                -webkit-mask-size: cover;
+            }
+        </style>
+        <script>
+            $(window).scroll(function(){
+                $(".fader").css("opacity", 1 - $(window).scrollTop() / 250);
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class="page">
+            <div class="image">
+                <div class="fader"></div>
+                <img src="image.jpg">
+            </div>
+        </div>
+    </body>
+</html>
