@@ -1,4 +1,5 @@
 # simple-fader
-Simple Fader for Public Testing
 
-http://codepen.io/lanoid/pen/regpJo
+Simple Fader or the Mighty Craig David Revealer
+
+Have fun with it here: http://codepen.io/lanoid/pen/regpJo
